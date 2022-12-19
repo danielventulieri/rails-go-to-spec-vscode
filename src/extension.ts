@@ -47,7 +47,7 @@ export function activate(context: vscode.ExtensionContext) {
 	let relative: string = vscode.workspace.asRelativePath(related);
 	let fileExists: boolean = fs.existsSync(related);
 	let dirname: string = path.dirname(related);
-	
+
 	//console.log('fileExists', fileExists);
 
 	if (fileExists) {

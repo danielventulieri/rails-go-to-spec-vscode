@@ -8,19 +8,19 @@ import * as resolver from './resolver';
 
 var testCases = [
 	[
-		'/spec/something/foo_spec.rb',
+		'/test/something/foo_test.rb',
 		'/app/something/foo.rb',
 	],
 	[
-		'/spec/views/namespace/users/_something.html.erb_spec.rb',
+		'/test/views/namespace/users/_something.html.erb_test.rb',
 		'/app/views/namespace/users/_something.html.erb',
 	],
 	[
-		'/spec/views/namespace/users/something.html.haml_spec.rb',
+		'/test/views/namespace/users/something.html.haml_test.rb',
 		'/app/views/namespace/users/something.html.haml',
 	],
 	[
-		'/spec/lib/something/foo_spec.rb',
+		'/test/lib/something/foo_test.rb',
 		'/lib/something/foo.rb',
 	],
 ]
@@ -28,11 +28,11 @@ var testCases = [
 test("isSpec", (t) => {
 	var testCases = [
 		[
-			'/spec/foo/something_spec.rb',
+			'/test/foo/something_test.rb',
 			true,
 		],
 		[
-			'/spec/views/something.html.erb_spec.rb',
+			'/test/views/something.html.erb_test.rb',
 			true,
 		],
 		[
@@ -40,7 +40,7 @@ test("isSpec", (t) => {
 			false,
 		],
 		[
-			'/spec/views/something.html.erb.rb',
+			'/test/views/something.html.erb.rb',
 			false,
 		]
 	]
